@@ -117,14 +117,14 @@ def twiss_and_check(mad, sequences_to_check, twiss_fname,
                     twiss_df=tt,
                     variable_dicts=var_dict,
                     tol=tol_beta)
-        print('IP beta test against knobs passed!')
+        print('###### CHECK: IP beta test against knobs passed!')
 
     if check_separations_at_ips:
         twiss_df_b1 = twiss_dfs['lhcb1']
         twiss_df_b2 = twiss_dfs['lhcb2']
         check_separations_at_ips_against_madvars(twiss_df_b1, twiss_df_b2,
                 var_dict, tol=tol_sep)
-        print('IP separation test against knobs passed!')
+        print('###### CHECK: IP separation test against knobs passed!')
 
     other_data = {}
     other_data.update(var_dict)
